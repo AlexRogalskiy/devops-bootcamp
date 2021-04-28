@@ -25,7 +25,7 @@ In this exercise we will get started by installing Helm and creating, installing
 
 4. Run `helm lint .` to check the syntax of your helm chart.
 
-5. Run `helm install configmap .` to instal the Helm chart and create the configmap resource to the Kubernetes cluster. 
+5. Run `helm install configmap .` to install the Helm chart that ceates a Kubernetes configmap resource. 
 
 ?> To view the state of the Helm chart you just installed you can run `helm list -a` 
 
