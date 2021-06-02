@@ -5,6 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: liatrio/devops-bootcamp
 spec:
-  type: other
-  lifecycle: unknown
+  type: website
+  lifecycle: production
   owner: Liatrio
