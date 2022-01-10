@@ -1,0 +1,30 @@
+name: 'S3 Sync'
+description: 'Syncs content with AWS S3 bucket'
+inputs:
+  source:
+    description: 'Local path or S3 URI to synchronize content from'
+    required: true
+  destination:
+    description: 'Local path or S3 URI to synchronize content to'
+    required: true
+  args:
+    description: 'Extra sync arguments'
+    required: false
+runs:
+  using: 'docker'
+  image: 'docker://amazon/aws-cli:2.0.47'
+  args: 
+    - s3 
+    - sync 
+    - ${{ inputs.source }}
+    - ${{ inputs.destination }}
+    - --no-progress
+    - --delete 
+    - --acl 
+    - public-read
+    - --exclude 
+    - .git/*
+    - --exclude
+    - .github/*
+    - --exclude
+    - branch/*

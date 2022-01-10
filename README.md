@@ -1,7 +1,7 @@
 <center>
 
   <img src="docs/img/favicon.svg" alt="drawing" width="150"/>
-  
+
   # Liatrio's DevOps Bootcamp
 
 </center>

@@ -1,0 +1,14 @@
+name: 'S3 rm'
+description: 'Remove content from AWS S3 bucket'
+inputs:
+  uri:
+    description: 'S3 URI to remove'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://amazon/aws-cli:2.0.47'
+  args: 
+    - s3 
+    - rm 
+    - ${{ inputs.uri }}
+    - --recursive
